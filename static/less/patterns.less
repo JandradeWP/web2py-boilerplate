@@ -132,7 +132,8 @@
       text-decoration: none;
     }
   }
-  .active a {
+  .active a, 
+  .web2py-menu-active {
     background-color: #222;
     background-color: rgba(0,0,0,.5);
   }
@@ -144,7 +145,7 @@
     margin-right: 0;
     // backwards compatibility
     .menu-dropdown,
-    .dropdown-menu {
+    .dropdown-menu,  .web2py-menu-vertical  {
       right: 0;
     }
   }
@@ -153,17 +154,18 @@
   a.menu:hover,
   li.open .menu,
   .dropdown-toggle:hover,
-  .dropdown.open .dropdown-toggle {
+  .dropdown.open .dropdown-toggle, .web2py-menu-expand a {
     background: #444;
     background: rgba(255,255,255,.05);
   }
   // .menu-dropdown for backwards compatibility
   .menu-dropdown,
-  .dropdown-menu {
+  .dropdown-menu, .web2py-menu-vertical {
     background-color: #333;
     // a.menu for backwards compatibility
     a.menu,
-    .dropdown-toggle {
+    .dropdown-toggle,
+    .web2py-menu-expand a {
       color: #fff;
       &.open {
         background: #444;
@@ -187,7 +189,7 @@
 
 // For backwards compatability with new dropdowns, redeclare dropdown link padding
 .topbar ul .menu-dropdown li a,
-.topbar ul .dropdown-menu li a {
+.topbar ul .dropdown-menu li a,  .web2py-menu-vertical li a {
   padding: 4px 15px;
 }
 
@@ -195,13 +197,14 @@
 // Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
 // li.menu for backwards compatibility
 li.menu,
-.dropdown {
+.dropdown,
+.web2py-menu-expand {
   position: relative;
 }
 // The link that is clicked to toggle the dropdown
 // a.menu for backwards compatibility
 a.menu:after,
-.dropdown-toggle:after {
+.dropdown-toggle:after, .web2py-menu-expand a:after {
   width: 0;
   height: 0;
   display: inline-block;
@@ -218,7 +221,8 @@ a.menu:after,
 // The dropdown menu (ul)
 // .menu-dropdown for backwards compatibility
 .menu-dropdown,
-.dropdown-menu {
+.dropdown-menu,
+.web2py-menu-vertical {
   background-color: #fff;
   float: left;
   display: none; // None by default, but block on "open" of the menu
@@ -255,7 +259,7 @@ a.menu:after,
   }
 }
 
-.topbar .dropdown-menu, .dropdown-menu {
+.topbar .dropdown-menu, .dropdown-menu, .web2py-menu-vertical {
   // Links within the dropdown menu
   a {
     display: block;
@@ -282,14 +286,14 @@ a.menu:after,
 .dropdown.open {
   // .menu for backwards compatibility
   .menu,
-  .dropdown-toggle {
+  .dropdown-toggle, .web2py-menu-expand a {
     color: #fff;
     background: #ccc;
     background: rgba(0,0,0,.3);
   }
   // .menu-dropdown for backwards compatibility
   .menu-dropdown,
-  .dropdown-menu {
+  .dropdown-menu,  .web2py-menu-vertical  {
     display: block;
   }
 }
@@ -338,21 +342,21 @@ a.menu:after,
   }
   // first one for backwards compatibility
   .menu-dropdown,
-  .dropdown-menu {
+  .dropdown-menu,  .web2py-menu-vertical  {
     top: 35px;
     border-width: 1px;
     .border-radius(0 6px 6px 6px);
   }
   // first one for backwards compatibility
   a.menu:after,
-  .dropdown-toggle:after {
+  .dropdown-toggle:after, .web2py-menu-expand a:after {
     border-top-color: #999;
     margin-top: 15px;
     margin-left: 5px;
   }
   // first one for backwards compatibility
   li.open a.menu:after,
-  .dropdown.open .dropdown-toggle:after {
+  .dropdown.open .dropdown-toggle:after, .web2py-menu-expand > a:after  {
     border-top-color: #555;
   }
 }

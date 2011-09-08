@@ -155,10 +155,12 @@ form div.error {
   display: inline-block;
   width: 300px;
   background: lighten(@red, 57%);
-  padding: 7px;
+  padding: 6px;
   margin-left: 5px;
   .border-radius(4px);
   @error-text: desaturate(lighten(@red, 25%), 25%);
+  color: @red;
+  border: 1px solid @red;
   > label,
   span.help-inline,
   span.help-block {

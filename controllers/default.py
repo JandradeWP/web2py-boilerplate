@@ -40,7 +40,7 @@ def user():
     """
 
     form = auth()
-
+    form.element(_type='submit')['_class']='primary'
     return dict(form=form)
 
 

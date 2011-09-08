@@ -4,8 +4,9 @@
       if _file in response.files[:_k]:
         continue
         _file0=_file.lower().split('?')[0]
-      if _file0.endswith('.css'):
-    }}
+      if _file0.endswith('.less'):
+      }}
+    <link href="{{=_file}}" rel="stylesheet" type="text/less" />{{elif _file0.endswith('.css'):}}
     <link href="{{=_file}}" rel="stylesheet" type="text/css" />{{elif _file0.endswith('.js'):}}
     <script src="{{=_file}}" type="text/javascript"></script>{{pass
     pass}}

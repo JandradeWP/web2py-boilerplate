@@ -6,11 +6,15 @@
         
     Copyright (c) 2011, Alvaro Lizama Molina.
 """
+##################################################
+### Common LESS
+##################################################
+response.files.append(URL('static','less/bootstrap.less'))
+
 
 ##################################################
 ### Common CSS
 ##################################################
-response.files.append(URL('static','css/bootstrap.css'))
 response.files.append(URL('static','css/custom.css'))
 response.files.append(URL('static','css/jquery.jgrowl.css'))
 response.files.append(URL('static','css/jquery.poshytip.css'))
@@ -19,6 +23,7 @@ response.files.append(URL('static','css/jquery.poshytip.css'))
 ##################################################
 ### Common JS
 ##################################################
+response.files.append(URL('static','js/less.js'))
 response.files.append(URL('static','js/jquery.js'))
 response.files.append(URL('static','js/base.js'))
 response.files.append(URL('static','js/jquery.growl.js'))

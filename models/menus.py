@@ -13,8 +13,8 @@
 
 response.menu = [
         (T('Dashboard'), True, URL('default', 'index'), []),
-        (T('Dashboard'), False, URL('default', 'index'), [
-
+        (T('Dashboard'), False, None, [
+            (T('Dashboard'), False, URL('default', 'index'), []),
             ])
 
         ]

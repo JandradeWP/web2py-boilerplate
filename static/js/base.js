@@ -3,6 +3,18 @@ String.prototype.reverse = function () { return this.split('').reverse().join(''
 $(document).ready(function() { 
 
     //-------------------------------------------------------------- */
+    // Dropdown
+    //-------------------------------------------------------------- */
+    //
+    $("body").bind("click", function (e) {
+        $('.dropdown-toggle, .web2py-menu-expand > a, .menu').parent("li").removeClass("open");
+    });
+    $(".dropdown-toggle, .web2py-menu-expand > a, .menu").click(function (e) {
+        var $li = $(this).parent("li").toggleClass('open');
+        return false;
+    });
+
+    //-------------------------------------------------------------- */
     // Jquery UI
     //-------------------------------------------------------------- */
     //
