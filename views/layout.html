@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{=T.accepted_language or 'en'}}" class="no-js">    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>{{=response.title}}</title>
+  {{include 'header.html'}}  
+</head>
+<body>
+  <div class="container">
+
+    <div class="topbar-wrapper" style="z-index: 5;">
+      <div class="topbar">
+        <div class="topbar-inner">
+          <div class="container">
+            <h3><a href="#">{{=request.application.capitalize()}}</a></h3>
+            {{=MENU(response.menu, _class='nav')}}
+            {{try:}}{{=auth.navbar(action=URL('default', 'user'))}}{{except:pass}}                
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      {{include}} 
+    </div>
+
+  </div>
+</body>
+<body>
+</html>
