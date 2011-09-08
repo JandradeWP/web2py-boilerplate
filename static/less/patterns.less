@@ -154,7 +154,7 @@
   a.menu:hover,
   li.open .menu,
   .dropdown-toggle:hover,
-  .dropdown.open .dropdown-toggle, .web2py-menu-expand a {
+  .dropdown.open .dropdown-toggle {
     background: #444;
     background: rgba(255,255,255,.05);
   }
@@ -165,7 +165,7 @@
     // a.menu for backwards compatibility
     a.menu,
     .dropdown-toggle,
-    .web2py-menu-expand a {
+     {
       color: #fff;
       &.open {
         background: #444;
@@ -189,7 +189,7 @@
 
 // For backwards compatability with new dropdowns, redeclare dropdown link padding
 .topbar ul .menu-dropdown li a,
-.topbar ul .dropdown-menu li a,  .web2py-menu-vertical li a {
+.topbar ul .dropdown-menu li a{
   padding: 4px 15px;
 }
 
@@ -204,7 +204,7 @@ li.menu,
 // The link that is clicked to toggle the dropdown
 // a.menu for backwards compatibility
 a.menu:after,
-.dropdown-toggle:after, .web2py-menu-expand a:after {
+.dropdown-toggle:after, .web2py-menu-expand > a:after {
   width: 0;
   height: 0;
   display: inline-block;
@@ -286,14 +286,14 @@ a.menu:after,
 .dropdown.open {
   // .menu for backwards compatibility
   .menu,
-  .dropdown-toggle, .web2py-menu-expand a {
+  .dropdown-toggle, .web2py-menu-expand > a {
     color: #fff;
     background: #ccc;
     background: rgba(0,0,0,.3);
   }
   // .menu-dropdown for backwards compatibility
   .menu-dropdown,
-  .dropdown-menu,  .web2py-menu-vertical  {
+  .dropdown-menu, .web2py-menu-vertical  {
     display: block;
   }
 }

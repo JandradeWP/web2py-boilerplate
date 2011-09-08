@@ -2,9 +2,36 @@
 
 <h1>{{=message}}</h1>
 
-<table>
-<tr><td>hola<td><tr>
-<tr><td>hola2<td><tr>
+<div class="row">
+  <div class="span4 columns">
+    <h3>Tables</h3>
+  </div>
+  <div class="span12 columns">
+    <table class="zebra-striped">
+      <thead><tr><th>ID</th><th>Name</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alvaro</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Alvaro</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Alvaro</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-</table>
-
+<div class="row">
+  <div class="span4 columns">
+    <h3>Forms</h3>
+  </div>
+  <div class="span12 columns">
+    {{=form}}
+  </div>
+</div>

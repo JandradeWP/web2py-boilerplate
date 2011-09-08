@@ -21,7 +21,33 @@ def index():
 
     message = T('Hello World')
 
-    return dict(message=message)
+    form = SQLFORM.factory(
+            Field('email',
+                label='Email',
+                requires=IS_EMAIL()
+                ),
+            Field('active', 'boolean',
+                label='Active'
+                ),
+            Field('comment', 'text',
+                label='Comments'
+                ),
+
+            Field('role', 'integer', 
+                label='Rol',
+                requires=IS_IN_SET({1:'Admin', 2:'User'}, zero=None)
+                ),
+            formstyle='divs'
+            )
+
+    form.element(_type='submit')['_class']='primary'
+
+    if form.accepts(request.vars, session):
+            response.flash = 'Saved'
+    elif form.errors:
+        response.flash = 'Error'
+
+    return dict(message=message, form=form)
 
 
 def user():
