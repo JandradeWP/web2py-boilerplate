@@ -1,6 +1,9 @@
 {{extend 'layout.html'}}
 
-<h2>{{=T( request.args(0).replace('_',' ').capitalize() )}}</h2>
+<div class="page-header">
+  <h1>Users <small>{{=T( request.args(0).replace('_',' ').capitalize() )}}</small></h1>
+</div>
+
 <div id="web2py_user_form">
 {{=form}}
 {{if request.args(0)=='login':}}
