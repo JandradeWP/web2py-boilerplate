@@ -18,6 +18,7 @@ response.files.append(URL('static','less/bootstrap.less'))
 response.files.append(URL('static','css/custom.css'))
 response.files.append(URL('static','css/jquery.jgrowl.css'))
 response.files.append(URL('static','css/jquery.poshytip.css'))
+response.files.append(URL('static','css/jquery.ui.css'))
 
 
 ##################################################
@@ -25,6 +26,7 @@ response.files.append(URL('static','css/jquery.poshytip.css'))
 ##################################################
 response.files.append(URL('static','js/less.js'))
 response.files.append(URL('static','js/jquery.js'))
-response.files.append(URL('static','js/base.js'))
-response.files.append(URL('static','js/jquery.growl.js'))
+response.files.append(URL('static','js/jquery.jgrowl.js'))
 response.files.append(URL('static','js/jquery.poshytip.js'))
+response.files.append(URL('static','js/jquery.ui.js'))
+response.files.append(URL('static','js/base.js'))

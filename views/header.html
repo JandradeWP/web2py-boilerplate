@@ -10,3 +10,14 @@
     <link href="{{=_file}}" rel="stylesheet" type="text/css" />{{elif _file0.endswith('.js'):}}
     <script src="{{=_file}}" type="text/javascript"></script>{{pass
     pass}}
+
+    {{if response.flash:}}
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $.jGrowl('<h3><strong>{{=response.flash}}</strong></h3>',
+            { 
+              position: 'bottom-right'
+            });
+      });
+    </script>
+    {{pass}}

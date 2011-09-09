@@ -2,8 +2,7 @@
 	z-index:1000;
 	text-align:center;
 	max-width:200px;
-	color:#212121;
-	text-shadow: #d7dfe2 1px 1px;
+	color:#eaeaea;
 	/**
 	 * - If you set a background-image, border/padding/background-color will be ingnored.
 	 *   You can set any padding to .tip-inner instead if you need.
@@ -13,8 +12,7 @@
 }
 .tip-theme .tip-inner {
 	font:bold 1.1em Tahoma,sans-serif;
-	background:url('../images/bg.tip.png') repeat-x;
-	background-color:#fff;
+	background-color:#000;
 	padding:3px 12px 5px 12px;
 	box-shadow:1px 1px 0px 0px rgba(0, 0, 0, 0.35);
 	border-radius:5px;
@@ -30,7 +28,6 @@
 	left:50%;
 	width:15px;
 	height:9px;
-	background:url('../images/arrows.png') no-repeat;
 }
 .tip-theme .tip-arrow-right {
 	margin-top:-4px; /* approx. half the height to center it */
@@ -39,7 +36,6 @@
 	left:100%;
 	width:9px;
 	height:15px;
-	background:url('../images/arrows.png') no-repeat -9px 0;
 }
 .tip-theme .tip-arrow-bottom {
 	margin-top:0;
@@ -48,7 +44,6 @@
 	left:50%;
 	width:15px;
 	height:9px;
-	background:url('../images/arrows.png') no-repeat -23px 0;
 }
 .tip-theme .tip-arrow-left {
 	margin-top:-4px; /* approx. half the height to center it */
@@ -57,5 +52,4 @@
 	left:0;
 	width:9px;
 	height:15px;
-	background:url('../images/arrows.png') no-repeat -27px 0;
 }

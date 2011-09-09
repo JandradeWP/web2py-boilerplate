@@ -3,7 +3,7 @@
 """
     Boilerplate default controller 
     Author  :   Alvaro Lizama Molina <me@alvarolizama.net>
-        
+
     Copyright (c) 2011, Alvaro Lizama Molina.
 """
 
@@ -26,6 +26,9 @@ def index():
                 label='Email',
                 requires=IS_EMAIL()
                 ),
+            Field('Date', 'date',
+                label='Date'
+                ),
             Field('active', 'boolean',
                 label='Active'
                 ),
@@ -43,7 +46,7 @@ def index():
     form.element(_type='submit')['_class']='primary'
 
     if form.accepts(request.vars, session):
-            response.flash = 'Saved'
+        response.flash = 'Saved'
     elif form.errors:
         response.flash = 'Error'
 
